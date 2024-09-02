@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Seguros y Aseguradoras</title>
+    <link rel="stylesheet" href="../estilos/style.css"> <!-- Ajusta la ruta según la ubicación -->
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../index.html"><img src="../imagenes/logo de seguros.png" width="300px" alt="Logo de Seguros y Aseguradoras"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="sobrenosotros.html" target="_blank">Sobre Nosotros</a></li>
+                <li><a href="servicios.html" target="_blank">Servicios</a></li>
+                <li><a href="contactanos.html" target="_blank">Contacto</a></li>
+                <li><a href="pagatuseguro.html">Paga tu Seguro</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="login">
+        <div class="login-container">
+            <h1>Iniciar Sesión</h1>
+            <form onsubmit="event.preventDefault(); iniciarSesion();">
+                <div class="form-group">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Iniciar Sesión</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Seguros y Aseguradoras. Todos los derechos reservados.</p>
+        <a href="../index.html">Volver arriba</a>
+    </footer>
+
+    <script>
+        function iniciarSesion() {
+            // Simulación de autenticación exitosa
+            sessionStorage.setItem('autenticado', 'true');
+            window.location.href = 'pagatuseguro.html'; // Redirige al usuario después de iniciar sesión
+        }
+    </script>
+</body>
+</html>
